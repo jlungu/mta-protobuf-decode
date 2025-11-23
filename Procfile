@@ -1,0 +1,1 @@
+web: gunicorn mta_protobuf_decode:app

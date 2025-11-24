@@ -79,7 +79,7 @@ def get_train_times(stop_id):
                     if arrival_time is not None:
                         last_stop = stop_time_update.stop_id
 
-                if arrival_time and last_stop:
+                if arrival_time and last_stop and ((arrival_time - int(time.time())) // 60) > -2:
                     trains.append({
                         'route': trip.trip.route_id,
                         'arrival': arrival_time,
